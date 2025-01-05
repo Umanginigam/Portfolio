@@ -10,7 +10,7 @@ const Projects = () => {
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 ">
         My Projects
       </h1>
-      <hr className="w-[90%] border-t-2 border-gray-300 mb-10" />
+    
       <p className="text-lg text-white text-center px-5 mb-10 py-20">
         Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
       </p>

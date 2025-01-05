@@ -19,7 +19,7 @@ const About = () => {
             About Me
           </h1>
           <p className="text-lg md:text-xl leading-relaxed">
-            Hi, I'm <span className="text-blue-500 font-semibold">Umangi Nigam</span>, a passionate 
+            Hi, I&apos;m <span className="text-blue-500 font-semibold">Umangi Nigam</span>, a passionate 
             Computer Science student specializing in web development, AI/ML, and data analysis. 
             I have developed projects ranging from AI-driven applications to full-stack web solutions.
           </p>
@@ -29,7 +29,7 @@ const About = () => {
             I am constantly driven to learn, innovate, and deliver impactful solutions.
           </p>
           <p className="text-lg md:text-xl leading-relaxed mt-4">
-            When I'm not coding, I enjoy exploring new tech, mentoring peers, and contributing to 
+            When I&apos;m not coding, I enjoy exploring new tech, mentoring peers, and contributing to 
             open-source projects.
           </p>
         </motion.div>
