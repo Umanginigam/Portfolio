@@ -43,7 +43,7 @@ const Navbar = () => {
     href="#contact" 
     className="px-6 py-2 border border-[#7042f861] bg-[#0300145e] mr-[15px]  rounded-full text-gray-200"
   >
-    Let's Connect
+    Let&apos;s Connect
   </a>
 </div>
 
