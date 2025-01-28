@@ -33,7 +33,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <motion.form
-          action="https://formspree.io/f/your_form_id"
+          action="https://formspree.io/f/mdkagelz
           method="POST"
           className="w-full md:w-2/3 bg-gray-800 p-6 rounded-lg shadow-lg"
           initial={{ opacity: 0, y: 50 }}
