@@ -1,11 +1,40 @@
 "use client";
 
 import React from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_a5pbu69", // Replace with your EmailJS service ID
+          "template_jhogelg", // Replace with your EmailJS template ID
+          formRef.current,
+          "Mlswlu1aDyLyIdUYi" 
+        )
+        .then(
+          (result) => {
+            console.log("Success:", result.text);
+            setMessage("Message sent successfully!");
+            formRef.current?.reset(); // Clear form after submission
+          },
+          (error) => {
+            console.log("Error:", error.text);
+            setMessage("Something went wrong. Please try again.");
+          }
+        );
+    }
+  };
   return (
     <div className="relative w-full h-screen bg-black text-white overflow-hidden" id="contact">
       {/* Background video */}
@@ -33,8 +62,8 @@ const Contact = () => {
 
         {/* Contact Form */}
         <motion.form
-          action="https://formspree.io/f/mdkagelz
-          method="POST"
+          ref={formRef}
+          onSubmit={sendEmail}
           className="w-full md:w-2/3 bg-gray-800 p-6 rounded-lg shadow-lg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
